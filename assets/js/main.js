@@ -41,7 +41,6 @@ window.addEventListener('scroll', scrollHeader)
 
 
 
-
 /*==================== 作品 PROJECT SWIPER ====================*/
 var swiper = new Swiper(".project__container", {
     slidesPerView: "auto",
@@ -49,6 +48,7 @@ var swiper = new Swiper(".project__container", {
     spaceBetween: 12,
     loop: true,
     loopAdditionalSlides: 3,
+    mousewheel: true,
   });
 
 

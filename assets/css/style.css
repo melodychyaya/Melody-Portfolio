@@ -10,13 +10,10 @@
   --hue-color: 207;
 
   /* HSL color mode */
-  --first-color: hsl(var(--hue-color), 65%, 65%);
-  --first-color-alt: hsl(var(--hue-color), 65%, 65%);
-  --second-color: rgb(238,192,173);
+  --first-color: rgb(238,192,173);
   --title-color: hsl(var(--hue-color), 4%, 16%);
   --text-color: hsl(var(--hue-color), 4%, 28%);
   --text-color-light: hsl(var(--hue-color), 4%, 56%);
-  /* --body-color: rgb(245,235,219); */
   --body-color: hsl(207, 4%, 99%);
   --white-color: #FFF;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
@@ -78,7 +75,7 @@
 
 /*========== Variables Dark theme ==========*/
 body.dark-theme {
-  --second-color: hsl(var(--hue-color), 4%, 12%);
+  --first-color: hsl(var(--hue-color), 4%, 12%);
   --title-color: hsl(var(--hue-color), 4%, 95%);
   --text-color: hsl(var(--hue-color), 4%, 65%);
   --body-color: hsl(207, 4%, 10%);
@@ -127,7 +124,6 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
-  /* background-color: rgb(237,181,181); */
   color: var(--text-color);
 }
 
@@ -348,31 +344,13 @@ input {
   place-items: center;
 }
 
-/* .home__sparkle{
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  right: -8rem;
-  top: 3rem;
-}
-
-.home__flower{
-  width: 4rem;
-  height: 4rem;
-  position: absolute;
-  left: -9rem;
-  bottom: -1rem;
-} */
-
 .home__perfill{
-  /* background: var(--gradient-color); */
   width: 170px;
   height: 260px;
   border-radius: 5.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* align-items: flex-end; */
   overflow: hidden;
 }
 
@@ -455,7 +433,7 @@ input {
 .home__shape-small{
   width: 150px;
   height: 150px;
-  background-color: #ff8b3f8f;
+  background-color: var(--first-color);
   top: -2.5rem;
   left: -1.5rem;
 }
@@ -463,9 +441,10 @@ input {
 .home__shape-big{
   width: 250px;
   height: 250px;
-  background-color: #ff8b3f8f;
+  background-color: var(--first-color);
   top: 16rem;
   right: -6.5rem;
+  opacity: .8;
 }
 
 
@@ -502,7 +481,7 @@ input {
   position: relative;
   width: 228px;
   height: 322px;
-  background-color: var(--second-color);
+  background-color: var(--first-color);
   text-align: center;
   padding: 3.5rem 1rem;
   border-radius: 7.25rem;
@@ -541,6 +520,11 @@ input {
 
 .about__card:hover .about__border{
   opacity: 1;
+}
+
+.about__description{
+  font-size: var(--small-font-size);
+  line-height: 1.5;
 }
 
 
@@ -597,23 +581,8 @@ input {
 
 /* Swiper class */
 .swiper-slide {
-  /* text-align: center; */
   width: auto;
 }
-
-.project__container .swiper-pagination-bullets{
-  bottom: 0;
-}
-
-.project__container .swiper-pagination-bullet{
-  background-color: var(--text-color-light);
-  opacity: initial;
-}
-
-.project__container .swiper-pagination-bullet-active{
-  background-color: var(--text-color);
-}
-
 
 /*==================== CONTACT ====================*/
 .contact{
@@ -787,9 +756,7 @@ input {
 }
 
 .footer_bg{
-  /* background-color: hsl(190deg 23% 58%); */
   background-color: var(--body-color);
-  /* padding: 2rem 0; */
 }
 
 
@@ -807,20 +774,6 @@ input {
   font-family: var(--title-font);
   cursor: pointer;
 }
-/* .portfolio__container {
-  gap: 1rem;
-}
-.portfolio__card {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-.portfolio__img {
-  width: 100%;
-  height: 100%;
-  transition: .4s;
-} */
 
 .portfolio__container{
   column-count: 3;
@@ -839,7 +792,8 @@ input {
   align-items: center;
   column-gap: 0.5rem;
   margin-top: 1.5rem;
-  font-size: var(--font-medium);
+  font-family: var(--title-font);
+  font-size: 17px;
 }
 
 .portfolio__button i {
@@ -996,7 +950,7 @@ input {
     align-items: center;
   }
   .about__title {
-    margin-bottom: var(--mb-1-5);
+    margin-bottom: var(--mb-1);
   }
   .about__description {
     margin-bottom: var(--mb-2);
@@ -1052,7 +1006,7 @@ input {
     width: 500px;
     height: 500px;
     top: 28rem;
-    right: -8rem;
+    right: -15rem;
   }
 
   .about__img-one {
