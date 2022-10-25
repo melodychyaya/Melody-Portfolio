@@ -171,7 +171,7 @@ const sr = ScrollReveal({
 
 sr.reveal(`.home__title, .scrollReveal-web, .scrollReveal-banner, .scrollReveal-edm, .footer__container`)
 sr.reveal(`.home__social`, {delay: 600, origin: 'bottom' , interval: 100})
-sr.reveal(`.about__container`, {interval: 100})
+sr.reveal(`.about__card`, {interval: 100})
 sr.reveal(`.contact__content:nth-child(1)`, {origin: 'left'})
 sr.reveal(`.contact__content:nth-child(2)`, {origin: 'right'})
 
