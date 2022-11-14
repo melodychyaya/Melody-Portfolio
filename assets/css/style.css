@@ -14,6 +14,7 @@
   --title-color: hsl(var(--hue-color), 4%, 16%);
   --text-color: hsl(var(--hue-color), 4%, 28%);
   --text-color-light: hsl(var(--hue-color), 4%, 56%);
+  --background-color: linear-gradient(#fff7e8, #df9a75);
   --body-color: hsl(207, 4%, 99%);
   --white-color: #FFF;
   --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
@@ -27,7 +28,7 @@
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: 'Roboto', sans-serif;
   --title-font: 'Lora', sans-serif;
-  --biggest-font-size: 1.5rem;
+  --biggest-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
@@ -81,6 +82,7 @@ body.dark-theme {
   --body-color: hsl(207, 4%, 10%);
   --scroll-bar-color: hsl(var(--hue-color), 12%, 48%);
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
+  --background-color: hsl(207, 4%, 10%);
 }
 
 /*========== Button Dark/Light ==========*/
@@ -124,6 +126,7 @@ body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
+  /* background: var(--background-color); */
   color: var(--text-color);
 }
 
@@ -170,9 +173,12 @@ input {
 
 
 /*=============== REUSABLE CSS CLASSES ===============*/
+/* main{
+  background: url(../img/bg_keyArea.png) repeat-x center top/contain;
+} */
 .section {
   padding: 4.5rem 0 2.5rem;
-  background-color: var(--body-color);
+  /* background-color: var(--body-color); */
 }
 
 .section__title, 
@@ -315,6 +321,7 @@ input {
 /*=============== HOME ===============*/
 .home{
   position: relative;
+  padding: 7rem 0;
 }
 
 .home__container{
@@ -423,14 +430,15 @@ input {
 }
 
 /* SHAPES */
-.home__shape-small,
+
+/* .home__shape-small,
 .home__shape-big{
   position: absolute;
   border-radius: 50%;
   filter: blur(90px);
-}
+} */
 
-.home__shape-small{
+/* .home__shape-small{
   width: 150px;
   height: 150px;
   background-color: var(--first-color);
@@ -445,6 +453,24 @@ input {
   top: 16rem;
   right: -6.5rem;
   opacity: .8;
+} */
+
+.home__bgword{
+  position: absolute;
+  display: flex;
+  animation-name: name;
+  animation: name 15s linear infinite;
+  width: 1000px;
+  padding-right: 1.5rem;
+}
+
+@keyframes name {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-100%);
+  }
 }
 
 
@@ -755,9 +781,9 @@ input {
   color: var(--text-color-light);
 }
 
-.footer_bg{
+/* .footer_bg{
   background-color: var(--body-color);
-}
+} */
 
 
 /*==================== ALL PORTFOLIO ====================*/

@@ -48,6 +48,7 @@ var swiper = new Swiper(".project__container", {
     spaceBetween: 12,
     loop: true,
     loopAdditionalSlides: 3,
+    slidesPerGroup: 3,
     mousewheel: true,
   });
 
